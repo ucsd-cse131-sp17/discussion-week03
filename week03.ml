@@ -46,6 +46,9 @@ let res0 =
   let ( =- ) = helper ( - ) in
   (Some 3 =/ Some 2) =* (Some 1 =- Some 3) =+ (Some 5)
 
+
+
+
 (* Filter ******************************************)
 
 let isEven x =
@@ -74,6 +77,9 @@ let evens'       = error "undefined"
 
 let fourLetters' = error "undefined"
 
+
+
+
 (* Map ******************************************)
 
 
@@ -101,6 +107,9 @@ let listUpper'  = error "undefined"
 
 let listSquare' = error "undefined"
 
+
+
+
 (* Fold ******************************************)
 
 let rec sum (l: int list) : int = 
@@ -119,8 +128,37 @@ let rec concat (l: string list) : string =
 
 
 
-let rec fold_right (step: 'a -> 'acc -> 'acc) (acc: 'acc) (l: 'a list) : 'acc =
+let rec fold_right (step: 'a -> 'acc -> 'acc) (l: 'a list) (acc: 'acc) : 'acc =
   error "undefined"
+
+
+
+
+(* Fold (Tail Recursive) ******************************************)
+
+let rec sum_tr (l: int list) : int = 
+  error "undefined"
+
+let rec concat_tr (l: string list) : string = 
+  error "undefined"
+
+
+
+
+
+
+
+
+
+
+
+let rec fold_left (step: 'acc -> 'a -> 'acc) (acc: 'acc) (l: 'a list) : 'acc =
+  error "undefined"
+
+
+
+
+(* Fold examples ******************************************)
 
 let filter' (pred: 'a -> bool) (l: 'a list) : 'a list =
   error "undefined"
