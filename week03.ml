@@ -133,6 +133,12 @@ let rec fold_right (step: 'a -> 'acc -> 'acc) (l: 'a list) (acc: 'acc) : 'acc =
 
 
 
+let sum'    = error "undefined"
+
+let concat' = error "undefined"
+
+
+
 
 (* Fold (Tail Recursive) ******************************************)
 
