@@ -48,10 +48,7 @@ let rec find (ls: ('a * 'b) list) (key: 'a) : 'b option =
 
 let res0 = 
   let helper (f: 'a -> 'b -> 'c) (x: 'a option) (y: 'b option) : 'c option = 
-    match (x,y) with
-    | (None,_) -> None
-    | (_,None) -> None
-    | (Some a, Some b) -> Some (f a b)
+    option_app (option_map f x) y
   in
   let ( =/ ) (x: int option) (y: int option) : int option = 
     match (x,y) with
