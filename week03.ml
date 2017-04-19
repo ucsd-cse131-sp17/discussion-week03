@@ -35,10 +35,10 @@ let rec find (ls: ('a * 'b) list) (x: 'a) : 'b option =
  *)
 
 let res0 = 
-  let ( =/ ) (x: int option) (y: int option) : int option = 
+  let helper (op: 'a -> 'b -> 'c) (x: 'a option) (y: 'b option) : 'c option = 
     error "undefined" 
   in
-  let helper (op: 'a -> 'b -> 'c) (x: 'a option) (y: 'b option) : 'c option = 
+  let ( =/ ) (x: int option) (y: int option) : int option = 
     error "undefined" 
   in
   let ( =* ) = helper ( * ) in
